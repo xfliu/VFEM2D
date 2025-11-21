@@ -15,7 +15,7 @@ Algorithms and methods
 - Support for both Dirichlet eigenvalue problems and Steklov eigenvalue problems
 
 Revision history
-- Original MATLAB implementation (2016) — Chun'guang You, Hehu Xie, Xuefeng Liu (Steklov eigenvalue verification [2])
+- Original MATLAB implementation (2016) — Chun'guang You and Xuefeng Liu (Steklov eigenvalue verification [2])
 - 2024 — Xuefeng Liu: revisions for Dirichlet eigenvalue computations
 - 2025-11-21 — Xuefeng Liu: sorted and packaged release
 
