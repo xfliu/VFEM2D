@@ -1,20 +1,29 @@
-# VFEM2D
 Verified Finite Element Method (2D)
+-------------------------------
 
-VFEM2D aims to provide rigorous matrix assembly for FEM computations.
-Currently, this library provides matrix computations for the following FEMs:
-- Lagrange FEM of arbitrary order
-- Raviart–Thomas FEM of arbitrary order
+VFEM2D is a MATLAB library for rigorous finite element matrix assembly and verified eigenvalue computation on planar domains. It focuses on producing mathematically guaranteed results suitable for verified numerics and certified error bounds.
 
-It also provides algorithms to obtain rigorous eigenvalue bounds for the Laplace operator and the Steklov operator. Liu's projection-based eigenvalue estimation algorithm [3,4], together with linear conforming FEM, is used to obtain guaranteed lower bounds for eigenvalues. The Lehmann–Goerisch method (Chap. 5 of [1]) is used to obtain high-precision eigenvalue bounds with higher-degree Lagrange finite elements.
+Key features
+- High-order Lagrange finite elements (arbitrary polynomial degree)
+- Raviart–Thomas finite elements (arbitrary order)
+- Rigorous assembly routines designed for verified linear algebra
+- Verified eigenvalue bounds for Laplace and Steklov operators
 
-Revision history:
-- This MATLAB library was originally developed by Chun'guang You and Xuefeng Liu in 2016 for rigorous eigenvalue estimation of Steklov problems [2].
-- 2024: Xuefeng Liu — revision for Dirichlet eigenvalue computation.
-- 2025-11-21: Xuefeng Liu — sorted version for release.
+Algorithms and methods
+- Lower eigenvalue bounds: projection-based verified estimators (Liu’s framework [1,3,4])
+- High-precision bounds: Lehmann–Goerisch method combined with higher-order conforming FEM (Chap 6 of [1])
+- Support for both Dirichlet eigenvalue problems and Steklov eigenvalue problems
+
+Revision history
+- Original MATLAB implementation (2016) — Chun'guang You, Hehu Xie, Xuefeng Liu (Steklov eigenvalue verification [2])
+- 2024 — Xuefeng Liu: revisions for Dirichlet eigenvalue computations
+- 2025-11-21 — Xuefeng Liu: sorted and packaged release
 
 References
-1. Xuefeng Liu, Guaranteed Computational Methods for Self-Adjoint Differential Eigenvalue Problems, 2024, SpringerBriefs in Mathematics, Springer Singapore.
-2. Chun'guang You, Hehu Xie, and Xuefeng Liu, Guaranteed Eigenvalue Bounds for the Steklov Eigenvalue Problem, SIAM Journal on Numerical Analysis, 57(3), 1395–1410, 2019. DOI:10.1137/18M1189592.
-3. Xuefeng Liu, A framework of verified eigenvalue bounds for self-adjoint differential operators, Applied Mathematics and Computation, 267, pp. 341–355, 2015. DOI:10.1016/j.amc.2015.03.048.
-4. Xuefeng Liu and Shin'ichi Oishi, Verified eigenvalue evaluation for the Laplacian over polygonal domains of arbitrary shape, SIAM Journal on Numerical Analysis, 51(3), 1634–1654, 2013. DOI:10.1137/120878446.
+1. X. Liu, Guaranteed Computational Methods for Self-Adjoint Differential Eigenvalue Problems, SpringerBriefs in Mathematics, 2024. (https://doi.org/10.1007/978-981-97-3577-8) 
+2. C. You, H. Xie, X. Liu, Guaranteed Eigenvalue Bounds for the Steklov Eigenvalue Problem, SIAM J. Numer. Anal., 2019. (DOI:10.1137/18M1189592) 
+3. X. Liu, A framework of verified eigenvalue bounds for self-adjoint differential operators, Appl. Math. Comput., 2015.  (DOI:10.1016/j.amc.2015.03.048)
+4. X. Liu, S. Oishi, Verified eigenvalue evaluation for the Laplacian over polygonal domains, SIAM J. Numer. Anal., 2013.　(DOI:10.1137/120878446)
+
+Third-party software
+- VEIGS (verified eigenvalue solver for sparse matrices, MATLAB): included submodule (version committed 2025-11-21, commit 99dd50a). Repository: https://github.com/yuuka-math/veigs
