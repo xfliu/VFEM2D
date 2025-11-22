@@ -11,7 +11,7 @@ Key features
 
 Algorithms and methods
 - Lower eigenvalue bounds: projection-based verified estimators (Liu’s framework [1,3,4])
-- High-precision bounds: Lehmann–Goerisch method combined with higher-order conforming FEM (Chap 6 of [1])
+- High-precision bounds: Lehmann–Goerisch method combined with higher-order conforming FEM (Chap 5 of [1])
 - Support for both Dirichlet eigenvalue problems and Steklov eigenvalue problems
 
 Revision history
